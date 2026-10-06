@@ -12,19 +12,21 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://sarah-child.com/#website",
-        "url": "https://sarah-child.com/",
+        "@id": "https://sfchild.netlify.app/#website",
+        "url": "https://sfchild.netlify.app/",
         "name": "Sarah Child — Polar Glaciologist",
-        "about": { "@id": "https://sarah-child.com/#person" }
+        "about": {
+          "@id": "https://sfchild.netlify.app/#person"
+        }
       },
       {
         "@type": "Person",
-        "@id": "https://sarah-child.com/#person",
+        "@id": "https://sfchild.netlify.app/#person",
         "name": "Sarah Child",
         "jobTitle": "Polar Glaciologist",
         "description": "Glaciologist and geospatial scientist studying glacier change in Antarctica and Greenland using satellite observations, historical imagery, and field measurements.",
-        "url": "https://sarah-child.com/",
-        "image": "https://sarah-child.com/sarah-mountain.jpeg",
+        "url": "https://sfchild.netlify.app/",
+        "image": "https://sfchild.netlify.app/sarah-mountain.jpeg",
         "affiliation": {
           "@type": "Organization",
           "name": "University at Albany, State University of New York",
@@ -45,6 +47,19 @@
           "Photogrammetry",
           "Glacier dynamics"
         ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sfchild.netlify.app/#webpage",
+        "url": "https://sfchild.netlify.app/",
+        "name": "Sarah Child — Polar Glaciologist",
+        "description": "Sarah Child studies how glaciers in Antarctica and Greenland are changing, and what those changes mean for sea level.",
+        "isPartOf": {
+          "@id": "https://sfchild.netlify.app/#website"
+        },
+        "about": {
+          "@id": "https://sfchild.netlify.app/#person"
+        }
       }
     ]
   }
@@ -57,9 +72,7 @@
 <body>
   <header class="topbar">
     <a class="wordmark" href="#top" aria-label="Sarah Child, home">SC<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#research">Research</a><a href="/about.html">About</a><a href="#stories">Stories</a><a href="/thoughts.html">Thoughts</a><a href="#airphotos">Airphotos</a>
-    </nav>
+    <nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/about.html">About</a><a href="/#stories">Stories</a><a href="/thoughts.html">Thoughts</a><a href="/#airphotos">Airphotos</a></nav>
     <a class="contact-link" href="https://www.albany.edu/daes/postdoctoral-fellows" target="_blank" rel="noreferrer">University at Albany <span aria-hidden="true">↗</span></a>
   </header>
 
@@ -151,13 +164,9 @@
       <div class="airphotos-copy"><p class="eyebrow">04 / FROM ABOVE, THROUGH TIME</p><h2>When photographs<br />start to <em>move.</em></h2><p>Sarah also creates animations from historic aerial photographs of Antarctica, letting viewers see landscape change by moving between images taken at different moments. It’s a visual way to make the long view feel immediate.</p><a class="text-link" href="https://www.instagram.com/airphoto_antarctica/" target="_blank" rel="noreferrer">Explore Airphoto Antarctica <span>↗</span></a></div>
     </section>
 
-    <section class="thoughts section-pad" id="thoughts"><div class="thoughts-heading"><div><p class="eyebrow">05 / NOTES FROM THE FIELD</p><h2>A notebook for<br />open questions.</h2></div><p>Potential post ideas drawn from Sarah’s papers. They are previews for future writing, not posts attributed to Sarah.</p></div><div class="topic-grid">
-      <article class="topic-card"><span class="topic-number">01</span><div><span class="topic-source">FROM BYRD GLACIER, 2006</span><h3>Can a glacier record a flood beneath the ice?</h3><p>How a large basal crevasse may preserve a clue to hidden water moving under East Antarctica’s Byrd Glacier.</p></div></article>
-      <article class="topic-card"><span class="topic-number">02</span><div><span class="topic-source">FROM HISTORICAL ANTARCTIC AIRPHOTOS</span><h3>How do old photographs become 3D maps?</h3><p>A plain-language look at stereo images, ground control, and the care needed to make historical measurements trustworthy.</p></div></article>
-      <article class="topic-card"><span class="topic-number">03</span><div><span class="topic-source">FROM THE 85-YEAR GLACIER RECORD</span><h3>Why does a glacier’s history change its future forecast?</h3><p>How observations from before the satellite era can shift projections for glacier mass loss.</p></div></article>
-      <article class="topic-card"><span class="topic-number">04</span><div><span class="topic-source">FROM THE HELHEIM GLACIER STUDY</span><h3>Does a dramatic calving event make ice flow faster?</h3><p>What repeated scans showed about the difference between a striking break and a lasting change in glacier velocity.</p></div></article>
-      <article class="topic-card"><span class="topic-number">05</span><div><span class="topic-source">FROM THE TRANSANTARCTIC MANUSCRIPT</span><h3>What does “stable elevation” actually tell us?</h3><p>How researchers compare photographic records decades apart—and the limits behind interpreting small differences.</p></div></article>
-    </div><p class="topic-note">Draft topics only. Sarah can revise, approve, or replace each one before any post is published.</p><a class="all-papers notebook-cta" href="/thoughts.html">Visit the notebook <span aria-hidden="true">→</span></a></section>
+    <section class="thoughts section-pad" id="thoughts"><div class="thoughts-heading"><div><p class="eyebrow">05 / RESEARCH NOTES</p><h2>Glacier research,<br />in context.</h2></div><p>Brief explainers on the questions, methods, and findings behind Sarah’s research.</p></div>
+      <article class="thoughts-preview" data-featured-note><div><span class="thought-status" data-featured-status>ALASKA · 85-YEAR RECORD</span><h3 data-featured-title>What changes when the glacier record gets longer?</h3><p data-featured-copy>Historical photographs helped researchers extend the record for Kennicott and Root Glaciers back to 1938—and refine estimates of future mass loss.</p></div><a class="text-link" data-featured-link href="/thoughts.html#long-record">Read this note <span>→</span></a></article>
+      <a class="all-papers notebook-cta" href="/thoughts.html">Browse all research notes <span aria-hidden="true">→</span></a></section>
 
     <section class="closing">
       <p class="eyebrow light">THE ICE KEEPS A RECORD.</p>
