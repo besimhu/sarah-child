@@ -40,8 +40,7 @@
 .all-papers{display:inline-block;margin-top:27px;color:#304f55;font-size:12px;font-weight:700;border-bottom:1px solid #a7b7a7;padding-bottom:8px}.all-papers span{margin-left:9px}
 .airphotos{padding-top:110px;padding-bottom:115px;display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}
 .airphotos-visual{height:400px;position:relative;overflow:hidden;background:#d6dfd9}
-.airphotos-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(157deg,#ecf0ec 0 23%,#a3b9b5 23.5% 33%,#d5dfdc 33.5% 40%,#315c68 40.5% 100%);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
-.airphotos-visual:after{content:"";position:absolute;inset:-10% -20%;background:repeating-linear-gradient(162deg,transparent 0 39px,#eaf2ec60 40px 41px,transparent 42px 73px);transform:rotate(-3deg)}
+.airphotos-visual:before,.airphotos-visual:after{content:none}
 .airphoto-frame{position:absolute;z-index:1;border:1px solid #f4f6ebcc;transform:rotate(-8deg);box-shadow:0 13px 30px #17394344}
 .frame-back{width:62%;height:57%;left:13%;top:14%;opacity:.45;background:linear-gradient(145deg,#d8e3dd,#4b7880)}
 .frame-middle{width:62%;height:57%;left:19%;top:21%;opacity:.67;background:linear-gradient(160deg,#eef0e8 0 28%,#a7bcb6 28.5% 39%,#26586a 39.5%)}
@@ -113,8 +112,14 @@
 .research-card:hover .art-dot{transform:scale(1.35);box-shadow:0 0 0 10px #d4e5a34a,0 0 21px #e1f7ac}
 .story-visual-greenland,.story-visual-alaska,.story-visual-antarctica{background-color:#164765}
 .airphotos-visual{display:block;position:relative;overflow:hidden;background:#133d54;min-height:280px;color:white;text-decoration:none;isolation:isolate}
-.airphoto-video{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;object-position:center;z-index:-1}
-.airphoto-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:linear-gradient(180deg,#061e307d 0%,transparent 36%,transparent 48%,#061e30ad 100%);opacity:.9;transition:opacity .25s}
+.airphoto-video{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;object-position:center;z-index:0}
+.airphoto-overlay{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:linear-gradient(180deg,#061e307d 0%,transparent 36%,transparent 48%,#061e30ad 100%);opacity:.9;transition:opacity .25s}
+.airphoto-video{transition:transform .35s ease,filter .35s ease}
+.airphoto-watch{background:var(--lime);color:#173f4a;box-shadow:0 5px 18px #061e3066;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.airphoto-watch span{color:#173f4a}
+.airphotos-visual:hover .airphoto-video,.airphotos-visual:focus-visible .airphoto-video{transform:scale(1.035);filter:saturate(1.08)}
+.airphotos-visual:hover .airphoto-watch,.airphotos-visual:focus-visible .airphoto-watch{background:#edf5d8;color:#102f39;transform:translateY(-3px);box-shadow:0 9px 24px #061e3088}
+.airphotos-visual:focus-visible{outline:3px solid #d4e5a3;outline-offset:4px}
 .airphotos-visual:hover .airphoto-overlay{opacity:1}
 .airphoto-label,.airphoto-watch{font:600 10px/1.4 var(--sans);letter-spacing:.08em;color:white}
 .airphoto-label{align-self:flex-start;padding:7px 9px;background:#092a43bd}
