@@ -113,7 +113,7 @@
 .research-card:hover .art-dot{transform:scale(1.35);box-shadow:0 0 0 10px #d4e5a34a,0 0 21px #e1f7ac}
 .story-visual-greenland,.story-visual-alaska,.story-visual-antarctica{background-color:#164765}
 .airphotos-visual{display:block;position:relative;overflow:hidden;background:#133d54;min-height:280px;color:white;text-decoration:none;isolation:isolate}
-.airphoto-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-1}
+.airphoto-video{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;object-position:center;z-index:-1}
 .airphoto-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:linear-gradient(180deg,#061e307d 0%,transparent 36%,transparent 48%,#061e30ad 100%);opacity:.9;transition:opacity .25s}
 .airphotos-visual:hover .airphoto-overlay{opacity:1}
 .airphoto-label,.airphoto-watch{font:600 10px/1.4 var(--sans);letter-spacing:.08em;color:white}

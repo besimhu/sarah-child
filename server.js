@@ -17,9 +17,12 @@ createServer((req, res) => {
   try { pathname = decodeURIComponent(new URL(req.url, `http://${req.headers.host || 'localhost'}`).pathname); }
   catch { res.writeHead(400).end('Bad request'); return; }
   const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
-  const assetPath = relativePath === 'airphoto-preview.mp4' || relativePath === 'airphoto-preview.jpg'
-    ? resolve(root, 'public', relativePath)
-    : resolve(root, relativePath);
+  const publicAsset = relativePath.startsWith('public/');
+  const assetPath = publicAsset
+    ? resolve(root, relativePath)
+    : relativePath === 'airphoto-preview.mp4' || relativePath === 'airphoto-preview.jpg'
+      ? resolve(root, 'public', relativePath)
+      : resolve(root, relativePath);
   const filename = assetPath;
   const fromRoot = filename.slice(root.length).replaceAll('\\', '/');
   if (!fromRoot || fromRoot.startsWith('../') || fromRoot === '..') {
