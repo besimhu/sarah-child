@@ -1,0 +1,22 @@
+---
+const { active = '' } = Astro.props;
+const links = [
+  { label: 'Research', href: '/#research', key: 'research' },
+  { label: 'About', href: '/about.html', key: 'about' },
+  { label: 'Stories', href: '/#stories', key: 'stories' },
+  { label: 'Thoughts', href: '/thoughts.html', key: 'thoughts' },
+  { label: 'Airphotos', href: '/#airphotos', key: 'airphotos' },
+];
+---
+
+<header class="topbar">
+  <a class="wordmark" href="/" aria-label="Sarah Child, home">SC<span>.</span></a>
+  <nav aria-label="Main navigation">
+    {links.map(({ label, href, key }) => (
+      <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
+    ))}
+  </nav>
+  <a class="contact-link" href="https://www.albany.edu/daes/postdoctoral-fellows" target="_blank" rel="noreferrer">
+    University at Albany <span aria-hidden="true">↗</span>
+  </a>
+</header>

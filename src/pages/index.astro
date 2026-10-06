@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../components/SiteHeader.astro';
+---
 ---
 <!doctype html>
 <html lang="en">
@@ -72,11 +74,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="Sarah Child, home">SC<span>.</span></a>
-    <nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/about.html">About</a><a href="/#stories">Stories</a><a href="/thoughts.html">Thoughts</a><a href="/#airphotos">Airphotos</a></nav>
-    <a class="contact-link" href="https://www.albany.edu/daes/postdoctoral-fellows" target="_blank" rel="noreferrer">University at Albany <span aria-hidden="true">↗</span></a>
-  </header>
+  <SiteHeader active="research" />
 
   <main id="top">
     <section class="hero site-width" aria-labelledby="hero-title">

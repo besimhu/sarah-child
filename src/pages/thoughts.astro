@@ -1,4 +1,6 @@
 ---
+import SiteHeader from '../components/SiteHeader.astro';
+---
 ---
 <!doctype html>
 <html lang="en">
@@ -90,7 +92,7 @@
   </script>
   </head>
 <body>
-  <header class="topbar"><a class="wordmark" href="/" aria-label="Sarah Child, home">SC<span>.</span></a><nav aria-label="Main navigation"><a href="/#research">Research</a><a href="/about.html">About</a><a href="/#stories">Stories</a><a href="/thoughts.html">Thoughts</a><a href="/#airphotos">Airphotos</a></nav><a class="contact-link" href="mailto:sarah.child@colorado.edu">Get in touch</a></header>
+<SiteHeader active="thoughts" />
   <main id="top"><section class="page-hero section-pad"><p class="eyebrow">RESEARCH NOTES</p><h1>Glacier change,<br /><em>in context.</em></h1><p>Short, accessible notes on questions Sarah Child’s research helps answer. Each note points to the original study and a longer explainer.</p></section>
     <section class="notebook section-pad" aria-label="Research notes">
       <div class="notebook-intro"><p class="eyebrow">FROM THE PUBLISHED RESEARCH</p><p>Short notes on the methods, observations, and findings behind the glacier studies.</p></div>
