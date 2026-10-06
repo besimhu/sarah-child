@@ -9,14 +9,16 @@ const links = [
 ];
 ---
 
-<header class="topbar">
-  <a class="wordmark" href="/" aria-label="Sarah Child, home">SC<span>.</span></a>
-  <nav aria-label="Main navigation">
-    {links.map(({ label, href, key }) => (
-      <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
-    ))}
-  </nav>
-  <a class="contact-link" href="https://www.albany.edu/daes/postdoctoral-fellows" target="_blank" rel="noreferrer">
-    University at Albany <span aria-hidden="true">↗</span>
-  </a>
-</header>
+<div class="topbar-shell">
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="Sarah Child, home">SC<span>.</span></a>
+    <nav aria-label="Main navigation">
+      {links.map(({ label, href, key }) => (
+        <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
+      ))}
+    </nav>
+    <a class="contact-link" href="https://www.albany.edu/daes/postdoctoral-fellows" target="_blank" rel="noreferrer">
+      University at Albany <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+</div>

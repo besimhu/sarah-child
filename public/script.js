@@ -26,3 +26,25 @@ if (featuredNote) {
   featuredNote.querySelector('[data-featured-copy]').textContent = note.copy;
   featuredNote.querySelector('[data-featured-link]').href = `/thoughts.html#${note.id}`;
 }
+
+const airphotoVideo = document.querySelector('.airphoto-video');
+const airphotoSource = airphotoVideo?.querySelector('source[data-src]');
+if (airphotoVideo && airphotoSource && !reducedMotion) {
+  const startAirphotoVideo = () => {
+    if (!airphotoSource.src) {
+      airphotoSource.src = airphotoSource.dataset.src;
+      airphotoVideo.load();
+    }
+    airphotoVideo.play().catch(() => {});
+  };
+
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) startAirphotoVideo();
+      else airphotoVideo.pause();
+    }, { rootMargin: '200px 0px' });
+    videoObserver.observe(airphotoVideo);
+  } else {
+    startAirphotoVideo();
+  }
+}
